@@ -17,6 +17,7 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://devin.cx'),
   title: 'devin',
   description: 'builder, tinkerer, launcher of things',
 }
