@@ -1,14 +1,6 @@
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
 
-const PROJECTS = [
-  { name: 'theasulist', tld: '.com', desc: 'campus events, no friction' },
-  { name: 'getvibecheck', tld: '.com', desc: 'vibe-coded code review' },
-  { name: 'usebreazy', tld: '.com', desc: 'breathwork, simplified' },
-  { name: 'flyto', tld: '.dev', desc: 'deploy anywhere, fast' },
-  { name: 'tryslatehq', tld: '.com', desc: 'fintech infrastructure' },
-]
-
 export default function Home() {
   const posts = getAllPosts().slice(0, 3)
 
@@ -23,28 +15,6 @@ export default function Home() {
           builder. i make things, ship them, and write about what i learn along the way.
         </p>
       </div>
-
-      {/* projects preview */}
-      <section className="mb-16">
-        <div className="flex items-baseline justify-between mb-6">
-          <h2 className="font-mono text-sm text-muted">~/projects</h2>
-          <Link href="/projects" className="font-mono text-xs text-muted hover:text-accent transition-colors">
-            all &rarr;
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {PROJECTS.slice(0, 4).map((p) => (
-            <div key={p.name} className="border border-border rounded-md p-4 hover:border-muted transition-colors">
-              <div className="flex items-center gap-1.5 mb-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-green" />
-                <span className="text-accent font-medium">{p.name}</span>
-                <span className="text-muted">{p.tld}</span>
-              </div>
-              <p className="text-sm text-muted">{p.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* recent writing */}
       <section>

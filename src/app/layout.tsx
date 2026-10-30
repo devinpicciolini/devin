@@ -33,9 +33,6 @@ function Nav() {
           ~/devin
         </Link>
         <div className="flex gap-5 font-mono text-sm">
-          <Link href="/projects" className="text-muted hover:text-accent transition-colors">
-            projects
-          </Link>
           <Link href="/blog" className="text-muted hover:text-accent transition-colors">
             blog
           </Link>
@@ -62,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <footer className="w-full border-t border-border">
           <div className="max-w-3xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-muted">
-            <span>pytharies.com</span>
+            <span>devin.cx</span>
             <div className="flex gap-4">
               <a href="https://x.com/devinpicciolini" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">twitter</a>
               <a href="https://www.linkedin.com/in/devinpicciolini/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">linkedin</a>
